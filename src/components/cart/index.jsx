@@ -2,9 +2,11 @@
 import { useSelector } from "react-redux";
 import CartItem from "../cart-item/index"
 import * as Styles from "./styles";
+import { selectProductsTotalPrice } from "../../redux/cart/cart.selector";
 const Cart = ({ isVisible, setIsVisible }) => {
   const handleEscapeAreaClick = () => setIsVisible(false);
   const { products } = useSelector((rootReducer)=> rootReducer.cartReducer);
+  const productsTotalPrice = useSelector(selectProductsTotalPrice)
   return (
     <Styles.CartContainer isVisible={isVisible}>
       <Styles.CartEscapeArea onClick={handleEscapeAreaClick} />
@@ -15,6 +17,7 @@ const Cart = ({ isVisible, setIsVisible }) => {
             <CartItem key={product.id} product={product}/>
           ))
         }
+        <Styles.CartTotal>{productsTotalPrice ? `R$ ${productsTotalPrice}` : "Seu Carrinho está vazio :/" }</Styles.CartTotal>
       </Styles.CartContent>
     </Styles.CartContainer>
   );

@@ -6,22 +6,20 @@ import Cart from "../cart/index";
 
 // Styles
 import * as Styles from "./styles";
+import { selectProductCount } from "../../redux/cart/cart.selector";
 
 function Header() {
   const [cartIsVisible, setCartIsVisible] = useState(false);
 
   const { currentUser } = useSelector(rootReducer => rootReducer.userReducer);
   const { products } = useSelector(rootReducer => rootReducer.cartReducer);
+  const productsCount = useSelector(selectProductCount)
   const dispatch = useDispatch();
 
 
   const handleCartClick = () => {
     setCartIsVisible(true);
   };
-
-  const productsCount = useMemo(() => {
-    return products.reduce((acc, curr) => acc + curr.quantity, 0)
-  }, [products])
 
   const handleLoginClick = () => {
     dispatch(userLogin({ name: "Lucas", email: "lucas@gon.com" }))
