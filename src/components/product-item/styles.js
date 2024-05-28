@@ -3,7 +3,8 @@ import styled from "styled-components";
 export const ProductContainer = styled.div`
   display: flex;
   flex-direction: column;
-
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 8px;
   @media (max-width: 768px) {
     width: 100%;
   }
@@ -13,6 +14,7 @@ export const ProductInfo = styled.div`
   display: flex;
   justify-content: space-between;
   margin-top: 5px;
+  padding: 10px 15px;
 
   p {
     font-size: 1rem;
@@ -28,7 +30,7 @@ export const ProductImage = styled.div`
   background-repeat: no-repeat;
   background-position: center;
   border-radius: 10px;
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  
   display: flex;
   align-items: flex-end;
   transition: all 0.3s ease;
