@@ -1,21 +1,23 @@
-import CartActionTypes from "./action-types";
+// Forma de usar o redux sem uma lib toolkit
 
-export const addProductToCart = (payload) =>({
-  type: CartActionTypes.ADD_PRODUCT,
-  payload,
-});
+// import CartActionTypes from "./action-types";
 
-export const removeProductToCart = (payload) => ({
-  type: CartActionTypes.REMOVE_PRODUCT,
-  payload,
-});
+// export const addProductToCart = (payload) =>({
+//   type: CartActionTypes.ADD_PRODUCT,
+//   payload,
+// });
 
-export const incrementProduct = (payload) => ({
-  type: CartActionTypes.INCREMENT_PRODUCT,
-  payload,
-});
+// export const removeProductToCart = (payload) => ({
+//   type: CartActionTypes.REMOVE_PRODUCT,
+//   payload,
+// });
 
-export const decrementProduct = (payload) => ({
-  type: CartActionTypes.DECREMENT_PRODUCT,
-  payload,
-})
+// export const incrementProduct = (payload) => ({
+//   type: CartActionTypes.INCREMENT_PRODUCT,
+//   payload,
+// });
+
+// export const decrementProduct = (payload) => ({
+//   type: CartActionTypes.DECREMENT_PRODUCT,
+//   payload,
+// })

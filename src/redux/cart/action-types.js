@@ -1,8 +1,11 @@
-const CartActionTypes = {
-  ADD_PRODUCT: "cart/addProduct",
-  REMOVE_PRODUCT: "cart/removeProduct",
-  INCREMENT_PRODUCT: "cart/incrementProduct",
-  DECREMENT_PRODUCT: "cart/decrementProduct"
-};
+// const CartActionTypes = {
+//   ADD_PRODUCT: "cart/addProduct",
+//   REMOVE_PRODUCT: "cart/removeProduct",
+//   INCREMENT_PRODUCT: "cart/incrementProduct",
+//   DECREMENT_PRODUCT: "cart/decrementProduct"
+// };
 
-export default CartActionTypes;
+// export default CartActionTypes;
+
+
+// Forma de usar o redux sem alguma lib
